@@ -6,7 +6,7 @@ player.on('play', function () {
   console.log('played the video!');
 });
 
-player.on('play', throttle(currentSecond, 1000));
+player.on('timeupdate', throttle(currentSecond, 1000));
 
 let parseTime = 0;
 
