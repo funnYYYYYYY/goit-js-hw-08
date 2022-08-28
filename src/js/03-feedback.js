@@ -16,6 +16,7 @@ function onFormSubmit(e) {
 
   e.target.reset();
   localStorage.removeItem(STORAGE_KEY);
+  console.log(formData);
 }
 
 const formData = {};
@@ -23,7 +24,6 @@ const formData = {};
 function onImputValue(e) {
   formData[e.target.name] = e.target.value;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-  console.log(formData);
 }
 
 function onInputSaveValue() {
