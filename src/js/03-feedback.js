@@ -12,10 +12,9 @@ refs.form.addEventListener('input', throttle(onImputValue, 500));
 
 function onFormSubmit(e) {
   e.preventDefault();
+  console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
 
   e.currentTarget.reset();
-  localStorage.removeItem(STORAGE_KEY);
-  console.log(formData);
 }
 
 let formData = {};
